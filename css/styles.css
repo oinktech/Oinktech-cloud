@@ -1,0 +1,218 @@
+/* 通用样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0); /* 渐变背景 */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 页眉样式 */
+header {
+    background: #007bff; /* 更鲜明的背景色 */
+    color: #fff;
+    padding: 2rem 2.5rem; /* 更宽的内边距 */
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 更柔和的阴影 */
+    border-bottom: 5px solid #0056b3; /* 更厚的底部边框 */
+    border-radius: 0 0 20px 20px; /* 圆角效果 */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem; /* 更大的字体大小 */
+    letter-spacing: 1.5px;
+    animation: fadeIn 1s ease-out;
+    font-weight: bold;
+}
+
+/* 主要内容区样式 */
+main {
+    max-width: 900px; /* 更宽的主要内容区域 */
+    margin: 0;
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: 20px; /* 更圆角的边框 */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* 更柔和的阴影 */
+    animation: fadeIn 1s ease-out;
+    width: 100%;
+    box-sizing: border-box; /* 包含边距和内边距 */
+}
+
+/* 鉴权和上传区样式 */
+#auth-section, #upload-section {
+    margin-bottom: 2.5rem;
+}
+
+/* 按钮样式 */
+button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 更柔和的阴影 */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* 更强的阴影 */
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5);
+}
+
+/* 文件输入框样式 */
+input[type="file"] {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+    border: 1px solid #007bff;
+    background: #fff;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* 更柔和的阴影 */
+}
+
+/* 进度条样式 */
+#progress-container {
+    background: #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 更柔和的阴影 */
+    margin-bottom: 1.5rem;
+}
+
+#progress-bar {
+    height: 35px; /* 更高的进度条 */
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    width: 0;
+    border-radius: 12px;
+    transition: width 0.5s ease, background 0.5s ease;
+}
+
+/* 状态和空间使用样式 */
+#status, #space-used {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-out;
+}
+
+#error {
+    color: #dc3545;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+#success {
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+/* 链接列表样式 */
+#links {
+    display: flex;
+    flex-direction: column;
+}
+
+#links .file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 1rem; /* 更大的内边距 */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 更柔和的阴影 */
+}
+
+#links a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 12px;
+    font-size: 1.1rem; /* 更大的字体 */
+}
+
+#links a:hover {
+    color: #0056b3;
+}
+
+/* 删除按钮样式 */
+.delete-btn {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 更柔和的阴影 */
+}
+
+.delete-btn:hover {
+    background: #c82333;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 更强的阴影 */
+}
+
+.delete-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.15); /* 更柔和的阴影 */
+}
+
+footer a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* 隐藏按钮的样式 */
+button.hidden {
+    display: none;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
